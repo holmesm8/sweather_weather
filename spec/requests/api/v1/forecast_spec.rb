@@ -7,10 +7,11 @@ describe 'Forecast' do
     get "/api/v1/forecast?location=#{location}"
 
     expect(response).to be_successful
-    forecast = JSON.parse(response.body, symbolize_name: true)[:data]
+    forecast = JSON.parse(response.body, symbolize_names: true)[:data]
 
-    expect(forecast).to have_key('type')
-    expect(forecast).to have_key('attributes')
-
+    expect(forecast).to have_key(:attributes)
+    expect(forecast[:attributes]).to have_key(:current)
+    expect(forecast[:attributes]).to have_key(:hourly)
+    expect(forecast[:attributes]).to have_key(:daily)
   end
 end
