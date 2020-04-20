@@ -7,17 +7,18 @@ describe 'Antipode' do
     get "/api/v1/antipode?location=#{location}"
 
     expect(response).to be_successful
-    antipode = JSON.parse(response.body, symbolize_names: true)[:data]
+    antipode = JSON.parse(response.body, symbolize_names: true)
 
-    require "pry"; binding.pry
-    expect(antipode).to have_key(:attributes)
-    expect(antipode[:attributes]).to have_key(:location_name)
-    expect(antipode[:attributes]).to have_key(:summary)
-    expect(antipode[:attributes]).to have_key(:current_temperature)
-    expect(antipode[:attributes]).to have_key(:search_location)
-    expect(antipode[:attributes][:search_location]).to eq(location)
+    expect(antipode[:data]).to have_key(:attributes)
+    expect(antipode[:data][:attributes]).to have_key(:location_name)
+    expect(antipode[:data][:attributes][:forecast]).to have_key(:summary)
+    expect(antipode[:data][:attributes][:forecast]).to have_key(:current_temperature)
+    expect(antipode[:data][:attributes]).to have_key(:search_location)
+    expect(antipode[:data][:attributes][:search_location]).to eq(location)
   end
 end
+
+
 
 # expected return
 #

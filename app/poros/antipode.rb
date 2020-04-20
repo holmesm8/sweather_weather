@@ -8,6 +8,10 @@ class Antipode
     @search_location = location
   end
 
+  def forecast
+    hash = {:summary => summary, :current_temperature => current_temperature}
+  end
+
   def summary
     @weather_data.current[:weather][0][:main]
   end
