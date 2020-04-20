@@ -4,7 +4,6 @@ class Api::V1::UsersController < ApplicationController
   def create
     user = User.create(user_params)
     if user.save
-      binding.pry
       render json: UserSerializer.new(user)
     else
       "placeholder"
