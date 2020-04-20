@@ -9,6 +9,6 @@ class AntipodeService
       f.params["long"] = coords.location.lon
     end
     data = JSON.parse(response.body, symbolize_names: true)[:data]
-    @antipode = Antipode.new(data, location)
+    # @antipode = Antipode.new(data, location)
   end
 end

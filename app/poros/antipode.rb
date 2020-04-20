@@ -8,6 +8,11 @@ class Antipode
     @search_location = location
   end
 
+  def self.from_location(location)
+    data = AntipodeService.new(location)
+    new(data, location)
+  end
+
   def forecast
     hash = {:summary => summary, :current_temperature => current_temperature}
   end
