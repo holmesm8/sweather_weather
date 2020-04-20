@@ -9,6 +9,7 @@ describe 'Users Create' do
     user = User.last
 
     expect(response).to be_successful
+    expect(response.status).to eq(201)
     user = JSON.parse(response.body, symbolize_names: true)[:data]
 
     expect(user).to have_key(:attributes)
