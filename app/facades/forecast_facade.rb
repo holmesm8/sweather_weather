@@ -1,3 +1,5 @@
+# refactored out after realizing facade is for html view
+
 class ForecastFacade
   attr_reader :id, :name, :data, :current, :hourly, :daily
 

@@ -1,3 +1,5 @@
+# refactored out after realizing facade is for html view
+
 class BackgroundFacade
   attr_reader :id, :url
 

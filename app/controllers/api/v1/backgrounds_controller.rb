@@ -1,5 +1,6 @@
 class Api::V1::BackgroundsController < ApplicationController
   def show
-    render json: BackgroundSerializer.new(BackgroundFacade.new(params["location"]))
+    background = BackgroundService.new(params["location"]).background
+    render json: BackgroundSerializer.new(background)
   end
 end
