@@ -8,12 +8,14 @@ describe 'Antipode' do
 
     expect(response).to be_successful
     antipode = JSON.parse(response.body, symbolize_names: true)[:data]
-    require "pry"; binding.pry
 
-    expect(forecast).to have_key(:attributes)
-    expect(forecast[:attributes]).to have_key(:current)
-    expect(forecast[:attributes]).to have_key(:hourly)
-    expect(forecast[:attributes]).to have_key(:daily)
+    require "pry"; binding.pry
+    expect(antipode).to have_key(:attributes)
+    expect(antipode[:attributes]).to have_key(:location_name)
+    expect(antipode[:attributes]).to have_key(:summary)
+    expect(antipode[:attributes]).to have_key(:current_temperature)
+    expect(antipode[:attributes]).to have_key(:search_location)
+    expect(antipode[:attributes][:search_location]).to eq(location)
   end
 end
 

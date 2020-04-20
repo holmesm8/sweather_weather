@@ -1,5 +1,5 @@
 class AntipodeService
-  attr_reader :data
+  attr_reader :antipode
 
   def initialize(location)
     coords = GoogleService.new(location)
@@ -9,6 +9,6 @@ class AntipodeService
       f.params["long"] = coords.location.lon
     end
     data = JSON.parse(response.body, symbolize_names: true)[:data]
-    antipode = Antipode.new(data)
+    @antipode = Antipode.new(data, location)
   end
 end
