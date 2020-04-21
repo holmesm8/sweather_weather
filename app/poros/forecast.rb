@@ -19,6 +19,6 @@ class Forecast
   end
 
   def daily
-    @data[:daily].map {|data| data.slice(:dt, :temp, :weather)}[0..4]
+    @data[:daily].map {|data| data.slice(:dt, :temp, :weather)}[1..5]
   end
 end
