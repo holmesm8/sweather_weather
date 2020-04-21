@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 describe 'Roadtrip' do
-  it 'can expose raodtrip data' do
+  it 'can expose roadtrip data' do
 
     user_params = {email: "test@test.com", password: "test", password_confirmation: "test"}
     post "/api/v1/users", params: user_params
@@ -24,7 +24,7 @@ describe 'Roadtrip' do
     expect(roadtrip[:attributes]).to have_key(:weather_description)
   end
 
-  it 'can expose raodtrip data' do
+  it 'can return api key error message' do
 
     user_params = {email: "test@test.com", password: "test", password_confirmation: "test"}
     post "/api/v1/users", params: user_params
