@@ -1,4 +1,6 @@
 class Api::V1::RoadtripsController < ApplicationController
+  protect_from_forgery with: :null_session
+  
   def show
     if User.find_by(api_key: params["api_key"])
       roadtrip = GoogleMapsService.new(params["origin"], params["destination"]).roadtrip
