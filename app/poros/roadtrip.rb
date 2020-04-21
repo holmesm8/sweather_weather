@@ -1,5 +1,5 @@
 class Roadtrip
-  attr_reader :id, :origin_name, :destination_name, :travel_time
+  attr_reader :id, :origin_name, :destination_name, :travel_time, :weather, :destination_coords
 
   def initialize(data)
     @id = nil

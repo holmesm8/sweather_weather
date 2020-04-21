@@ -5,8 +5,4 @@ class Background
     @id = nil
     @url = data[:results][0][:urls][:full]
   end
-
-  # def url
-  #   @data[:results][0][:urls][:full]
-  # end
 end
