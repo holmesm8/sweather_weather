@@ -8,7 +8,7 @@ The intention of the back-end is to provide API endpoints for the front-end team
 ### Installation Locally
 * Install Ruby 2.6.3
 * Install Rails 6.0.2
-* Clone this repo to your local machine with: git clone git@github.com:https://github.com/holmesm8/sweather_weather
+* Clone this repo to your local machine
 * bundle install
 * rake db:{create,migrate}
 
