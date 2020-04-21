@@ -1,24 +1,26 @@
-# README
+# Sweather Weather
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### Description
+Sweather Weather is the back-end functionality for a web application that provides forecast information as well as forecast information for a destination.
 
-Things you may want to cover:
+The intention of the back-end is to provide API endpoints for the front-end team requirements based on their wireframes. This includes location, weather forecasts, background images of that specific location, user signup and login, and a roadtrip feature that shows travel time and destination forecast.
 
-* Ruby version
+### Installation Locally
+* Install Ruby 2.6.3
+* Install Rails 6.0.2
+* Clone this repo to your local machine with: git clone git@github.com:https://github.com/holmesm8/sweather_weather
+* bundle install
+* rake db:{create,migrate}
 
-* System dependencies
+This rails api app uses the following gems for testing:
+   * rspec-rails
+   * shoulda-matchers
 
-* Configuration
+To run the test suite, simply run the command `rspec` from your terminal.
 
-* Database creation
+The application also uses the bcrypt gem for password encryption for users.
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### API Keys Needed
+* Google API
+* OpenWeatherMap API
+* Unsplash API
