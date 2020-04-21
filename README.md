@@ -15,6 +15,7 @@ The intention of the back-end is to provide API endpoints for the front-end team
 This rails api app uses the following gems for testing:
    * rspec-rails
    * shoulda-matchers
+   * simplecov
 
 To run the test suite, simply run the command `rspec` from your terminal.
 
